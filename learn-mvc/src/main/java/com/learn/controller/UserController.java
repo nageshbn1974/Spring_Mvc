@@ -62,18 +62,8 @@ public class UserController {
 			return "user";
 		}
 
-		// user.setFirstName(model.get(""))
-
-		/*
-		 * , user.getLastName(), user.getFirstName() + user.getLastName(),
-		 * user.getPassword(), user.getFirstName().toLowerCase() +
-		 * user.getLastName().toLowerCase() + "@ness.com", new Date(),
-		 * user.getActive()
-		 */
-
-		user.setId((int) model.get("id"));
 		service.updateUser(user);
-		// model.clear();
+		model.clear();
 		return "redirect:list-users";
 	}
 
